@@ -104,6 +104,7 @@
 				widgets: [],		
 				widgetZebra: {css: ["even","odd"]},
 				headers: {},
+				selectorHeaders: "thead th",
 				widthFixed: false,
 				cancelSelection: true,
 				sortList: [],
@@ -295,7 +296,7 @@
 			
 				for(var i = 0; i < table.tHead.rows.length; i++) { tableHeadersRows[i]=0; };
 				
-				$tableHeaders = $("thead th",table);
+				$tableHeaders = $(table.config.selectorHeaders,table);
 		
 				$tableHeaders.each(function(index) {
 							
